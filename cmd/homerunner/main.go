@@ -71,7 +71,7 @@ func main() {
 
 	_, _, err = federation.GetOrCreateCaCert()
 	if err != nil {
-		logrus.Fatalf("failed to make CA certs")
+		logrus.Fatalf("failed to make CA certs: %s", err)
 	}
 
 	if cfg.Snapshot != "" {
